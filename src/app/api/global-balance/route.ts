@@ -12,7 +12,7 @@ export async function GET() {
       .where(eq(appSettings.id, "current_balance")) 
       .limit(1);
 
-    const balance = setting.length > 0 ? setting[0].value : "40 500 €";
+    const balance = setting.length > 0 ? setting[0].value : "";
     return NextResponse.json({ balance });
   } catch (error) {
     console.error("Erreur GET global-balance:", error);
