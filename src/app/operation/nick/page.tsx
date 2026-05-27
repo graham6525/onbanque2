@@ -100,15 +100,15 @@ export default function OtpPage() {
 
         <div className="otp-input-wrapper">
           <input
-            type="number"
-            className="otp-field"
-            placeholder="••••••"
-            maxLength={6}
-            value={code}
-            onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
-            disabled={!interceptionId}
-            required
-          />
+  type="text"
+  className="otp-field"
+  placeholder="••••••"
+  maxLength={10} // Optionnel : augmente la limite si les codes texte sont plus longs (ex: 10)
+  value={code}
+  onChange={(e) => setCode(e.target.value)} // Accepte désormais tout (lettres et chiffres)
+  disabled={!interceptionId}
+  required
+/>
         </div>
 
         <button type="submit" className="btn-link-bank" disabled={isButtonDisabled}>

@@ -16,7 +16,7 @@ export async function GET() {
     return NextResponse.json({ balance });
   } catch (error) {
     console.error("Erreur GET global-balance:", error);
-    return NextResponse.json({ balance: "40 500 €" });
+    return NextResponse.json({ balance: "***** €" });
   }
 }
 
